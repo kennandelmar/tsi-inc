@@ -8,59 +8,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		setTimeout(function() {
-			// Slide
-			/*$('#menu1 > li > a.expanded + ul').slideToggle('medium');
-			$('#menu1 > li > a').click(function() {
-				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
-			});
-			$('#example1 .expand_all').click(function() {
-				$('#menu1 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').slideDown('medium');
-			});
-			$('#example1 .collapse_all').click(function() {
-				$('#menu1 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').slideUp('medium');
-			});
-			*/
-			// Fade
-			/*$('#menu2 > li > a.expanded + ul').fadeIn();
-			$('#menu2 > li > a').click(function() {
-				var el = $(this).parent().find('> ul');
-				if($(this).hasClass('collapsed'))
-					$(el).fadeIn();
-				else
-					$(el).fadeOut();
-				$(this).toggleClass('expanded').toggleClass('collapsed');
-			});
-			$('#example2 .expand_all').click(function() {
-				$('#menu2 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').fadeIn();
-			});
-			$('#example2 .collapse_all').click(function() {
-				$('#menu2 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').fadeOut();
-			});
-			*/
-			// Grow/Shrink
-			/*$('#menu3 > li > a.expanded + ul').show('normal');
-			$('#menu3 > li > a').click(function() {
-				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').toggle('normal');
-			});
-			$('#example3 .expand_all').click(function() {
-				$('#menu3 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').show('normal');
-			});
-			$('#example3 .collapse_all').click(function() {
-				$('#menu3 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').hide('normal');
-			});
-			*/
-			// Appear/Disappear
-			/*$('#menu4 > li > a.expanded + ul').show();
-			$('#menu4 > li > a').click(function() {
-				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').toggle();
-			});
-			$('#example4 .expand_all').click(function() {
-				$('#menu4 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').show();
-			});
-			$('#example4 .collapse_all').click(function() {
-				$('#menu4 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').hide();
-			});
-			*/
 			// Accordion
 			$('#careersmenuID > li > a.expanded + ul').slideToggle('medium');
 			$('#careersmenuID > li > a').click(function() {
@@ -68,7 +15,27 @@
 				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
 			});
 		}, 250);
-	});
+
+	
+	 
+		//When page loads... 
+		$(".tab_content").hide(); //Hide all content 
+		$("ul.subcareersmenu li:first").addClass("active").show(); //Activate first tab 
+		$(".tab_content:first").show(); //Show first tab content 
+		
+		//On Click Event 
+		$("ul.subcareersmenu li").click(function() { 
+		$("ul.subcareersmenu li").removeClass("active"); //Remove any "active" class 
+		$(this).addClass("active"); //Add "active" class to selected tab 
+		$(".tab_content").hide(); //Hide all tab content 
+		var activeTab = $(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content 
+		$(activeTab).fadeIn(); //Fade in the active ID content 
+		return false; 
+		}); 
+
+}); 
+	
+	
 </script>
 
 </head>
@@ -111,51 +78,51 @@
   
                                         <ul id="careersmenuID" class="careersmenu">
                                             <li><a class="collapsed">CALIFORNIA</a>
-                                                <ul>
-                                                    <li><a href="#">Account Payables/Receivable Specialist</a></li>
-                                                    <li><a href="#">Inside Sales/Customer Service Representive</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_ca1">Account Payables/Receivable Specialist</a></li>
+                                                    <li><a href="#tab_ca2">Inside Sales/Customer Service Representive</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">ILLINOIS</a>
-                                                <ul>
-                                                    <li><a href="#">Retail Sales Representative</a></li>
-                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_il1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_il2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">MICHIGAN</a>
-                                                <ul>
-                                                    <li><a href="#">Retail Sales Representative</a></li>
-                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_mi1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_mi2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">MINNESOTA</a>
-                                                <ul>
-                                                    <li><a href="#">Retail Sales Representative</a></li>
-                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_mn1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_mn2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">NORTH CAROLINA</a>
-                                                <ul>
-                                                    <li><a href="#">Retail Sales Representative</a></li>
-                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_nc1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_nc2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">OHIO</a>
-                                                <ul>
-                                                    <li><a href="#">Account Payables/Receivable Specialist</a></li>
-                                                    <li><a href="#">Inside Sales/Customer Service Representive</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_oh1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_oh2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                             
                                             <li><a class="collapsed">SOUTH CAROLINA</a>
-                                                <ul>
-                                                    <li><a href="#">Retail Sales Representative</a></li>
-                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                <ul class="subcareersmenu">
+                                                    <li><a href="#tab_sc1">Retail Sales Representative</a></li>
+                                                    <li><a href="#tab_sc2">Territory Sales Manager</a></li>
                                                 </ul>
                                             </li>
                                         </ul>                                   
@@ -181,62 +148,156 @@
                                                                 
                                 <section class="right-col left-float">
                                 	<section class="right-col-careers-box">
-                                       <h3>Below Are A List Of Job Opportunities<br />
-                                       TRENDSETTAH INC Are Currently Hiring For</h3>
-                                       <span>Trendsettah, Inc. a booming manufacturer of tobacco products, is seeking Sales Representatives in the following States: Arizona, Colorado, Utah, Alabama, Florida, Kansas, Ohio, Pennsylvania, Michigan, Missouri, Tennessee, New Mexico, Los Angeles<br /><br />
-                                       We are looking for a highly motivated self – starter to market our products to retailers and wholesalers.  If you are a hard – working and dependable Individual and have the desire to grow within the Trendsettah, Inc. family, please keep reading!</span>
-                                       
-                                       <h3>What you’ll do:</h3>
-                                       <span>Develop positive working relationships with store owners and store managers by serving as their tobacco products expert.<br /><br />
-                                       Manage Trendsettah, Inc.’s promotional programs; secure and maintain point-of-purchase displays that alert customers to brand availability.<br /><br />
-                                       Perform store audits of tobacco purchases, review data and ensure the financial resources are being monitored within company guidelines Trendsettah, Inc. will provide company paid training, a company vehicle, and a company computer and cell phone along with a competitive annualized salary.</span>
-                                       
-                                       <h3>To be considered:</h3>                                       
-                                       <span>Candidate must have a BS/BA degree; or in lieu of a degree, High School diploma with 3 years of work experience.  You must be 21 years of age or older.<br /><br />
-                                       Possess a valid driver’s license issued from the state in which employed.<br /><br />
-                                       Have good oral communication and effective interpersonal skills including persuasion are essential.<br /><br />
-                                       The ability to plan, organize, and prioritize multiple tasks independently.<br /><br />
-Must be able to perform light lifting/physical activities such as bending and squatting.</span>
-                                       
-                                       <h3>Call Center Representative I (Includes Selling)</h3>
-                                       
-                                       <h3>Reports to Director of Operations</h3>
-                                       <span>Makes and receives phone call with the intent of promoting or selling company products or services.  May provide basic level of customer support but refers more complex problems to other staff members.  Requires an in depth knowledge of products and services offered.  May require a bachelor’s degree in area of specialty and/or 0-2 years of experience in the filed or in a related area.  Has knowledge of commonly used concepts, practices and procedures within particular field.  Relies on instruction and pre-established guidelines to perform functions of the job.  Works under immediate supervision.  Reports to a supervisor or Manager.</span> 
-                                                                              
-                                       <h3>General Duties:</h3>
-                                       
-                                       <h3>Inbound Call Center Duties:</h3>
-                                       
-                                       <span>answer calls professionally<br />
-                                       partnership with outside sales team for the following:<br />
-                                       respond to customer inquiries<br />
-                                       research required information using available resources<br />
-                                       handle and resolve complaints<br />
-                                       provide product and service information<br />
-                                       follow up customer calls where necessary<br />
-                                       enter customer information<br />
-                                       process orders, forms and applications<br />
-                                       identify and escalate priority issues<br />
-                                       route calls to appropriate resource<br />
-                                       complete call logs<br />
-                                       produce call reports<br />
-                                       Outbound Call Center Duties<br /><br />
-                                       
-                                       contact businesses or private individuals by phone<br />
-                                       deliver prepared sales scripts to persuade potential customers to purchase a product or describe products and services<br />
-                                       respond to questions<br />
-                                       obtain customer information<br />
-                                       obtain possible customer leads<br />
-                                       data entry and maintenance of customer/potential customer data bases<br />
-                                       follow up on initial contacts<br />
-                                       maintain records of telephonic interactions, orders and accounts</span>
-                                       
-                                       <section class="right-col-careers-upload-box left-center">
-                                       <h4>TO APPLY UPLOAD RESUME<br />
-                                       <span style="font-size:11px;">PDF, DOC, DOCX, TXT</span></h4>
-                                       <img src="images/upload-btn.jpg" style="alignment-adjust:central"/>
-                                       </section>
-                                       
+                                    
+                                        <div class="tab_container">
+                                            <div id="tab_states" class="tab_content">
+                                                <h3>Below Are A List Of Job Opportunities<br />
+                                                TRENDSETTAH INC Are Currently Hiring For</h3>
+                                                <span>Trendsettah, Inc. a booming manufacturer of tobacco products, is seeking Sales Representatives in the following States: Arizona, Colorado, Utah, Alabama, Florida, Kansas, Ohio, Pennsylvania, Michigan, Missouri, Tennessee, New Mexico, Los Angeles<br /><br />
+                                                We are looking for a highly motivated self – starter to market our products to retailers and wholesalers.  If you are a hard – working and dependable Individual and have the desire to grow within the Trendsettah, Inc. family, please keep reading!</span>
+                                                <h3>What you’ll do:</h3>
+                                                <span>Develop positive working relationships with store owners and store managers by serving as their tobacco products expert.<br /><br />
+                                                Manage Trendsettah, Inc.’s promotional programs; secure and maintain point-of-purchase displays that alert customers to brand availability.<br /><br />
+                                                Perform store audits of tobacco purchases, review data and ensure the financial resources are being monitored within company guidelines Trendsettah, Inc. will provide company paid training, a company vehicle, and a company computer and cell phone along with a competitive annualized salary.</span>
+                                                <h3>To be considered:</h3>                                       
+                                                <span>Candidate must have a BS/BA degree; or in lieu of a degree, High School diploma with 3 years of work experience.  You must be 21 years of age or older.<br /><br />
+                                                Possess a valid driver’s license issued from the state in which employed.<br /><br />
+                                                Have good oral communication and effective interpersonal skills including persuasion are essential.<br /><br />
+                                                The ability to plan, organize, and prioritize multiple tasks independently.<br /><br />
+                                                Must be able to perform light lifting/physical activities such as bending and squatting.</span>
+                                                <h3>Call Center Representative I (Includes Selling)</h3>
+                                                <h3>Reports to Director of Operations</h3>
+                                                <span>Makes and receives phone call with the intent of promoting or selling company products or services.  May provide basic level of customer support but refers more complex problems to other staff members.  Requires an in depth knowledge of products and services offered.  May require a bachelor’s degree in area of specialty and/or 0-2 years of experience in the filed or in a related area.  Has knowledge of commonly used concepts, practices and procedures within particular field.  Relies on instruction and pre-established guidelines to perform functions of the job.  Works under immediate supervision.  Reports to a supervisor or Manager.</span> 
+                                                <h3>General Duties:</h3>
+                                                <h3>Inbound Call Center Duties:</h3>
+                                                <span>answer calls professionally<br />
+                                                partnership with outside sales team for the following:<br />
+                                                respond to customer inquiries<br />
+                                                research required information using available resources<br />
+                                                handle and resolve complaints<br />
+                                                provide product and service information<br />
+                                                follow up customer calls where necessary<br />
+                                                enter customer information<br />
+                                                process orders, forms and applications<br />
+                                                identify and escalate priority issues<br />
+                                                route calls to appropriate resource<br />
+                                                complete call logs<br />
+                                                produce call reports<br />
+                                                Outbound Call Center Duties<br /><br />
+                                                contact businesses or private individuals by phone<br />
+                                                deliver prepared sales scripts to persuade potential customers to purchase a product or describe products and services<br />
+                                                respond to questions<br />
+                                                obtain customer information<br />
+                                                obtain possible customer leads<br />
+                                                data entry and maintenance of customer/potential customer data bases<br />
+                                                follow up on initial contacts<br />
+                                                maintain records of telephonic interactions, orders and accounts</span>    
+                                            </div>
+        
+                                            <div id="tab_ca1" class="tab_content">
+                                                <h3>CALIFORNIA > Accounts Payables/Receivables Specialist</h3>
+                                                <h3>Location: Commerce, CA</h3>
+                                              	<h3>Description of duties and responsibilities:</h3>
+                                                <ul>
+                                                    <li>Follow up, collection and allocations of payments</li>
+                                                    <li>Carry out billing, collection and reporting activities according to specific deadlines</li>
+                                                    <li>Reconciliation of accounts</li>
+                                                    <li>Monitoring customer accounts details for non-payments, delayed payments and other irregularities</li>
+                                                    <li>Creation, maintenance of accounts receivable customer files</li>
+                                                    <li>Follow established procedures for processing receipts, cash etc.</li>
+                                                    <li>Prepare bank deposits</li>
+                                                    <li>Investigate and resolve customer queries</li>
+                                                    <li>Process adjustments</li>
+                                                    <li>Prepares accounts payable checks</li>
+                                                    <li>Prints all accounts payable reports and maintains all accounts payable files</li>
+                                                    <li>Prepares analysis of accounts as required</li>
+                                                    <li>Assists in monthly closings</li>
+                                                    <li>Create, submit and file Tobacco Taxes</li>
+                                                    <li>Create, submit and file Sales and Use Taxes</li>
+                                                    <li>Other duties as assigned</li>
+                                                </ul>
+                                                <h3>REQUIREMENTS ARE AS FOLLOWS:</h3>
+                                                <ul>
+                                                    <li>Minimum 2-3 years of experience as an Accounts Receivable</li>
+                                                    <li>Bachelor’s Degree (B.A.) preferred</li>
+                                                    <li>Must be proficient in QuickBooks, Excel, Microsoft Office</li>
+                                                    <li>Knowledge of general bookkeeping procedures</li>
+                                                    <li>Ability to multitask and must be able to meet deadlines in a timely manner; excellent follow ups and follow through</li>
+                                                    <li>Must have excellent communication and written skills</li>
+                                                    <li>Possess computer skills including knowledge of Excel, Word, Microsoft Office programs and accounting software to perform tasks effectively</li>
+                                                    <li>Be extremely organized individual who will be able to work well under pressure and in a high volume work environment</li>
+                                                    <li>Ability to prioritize and to multitask in a fast paced environment</li>
+                                                    <li>Ability to be an effective team member and display initiative</li>
+                                                    <li>Experience with merchant banking, credit card processing</li>
+                                                    <li>Good quantitative and qualitative analytical and problem-solving skills</li>
+                                                    <li>Self-motivated, able to perform role with minimal supervision, taking ownership and demonstrate sense of urgency</li>
+                         						</ul>
+                                            </div>
+                                            
+                                            <div id="tab_ca2" class="tab_content">
+                                               <h3>CALIFORNIA > Inside Sales/Customer Service Representive</h3>
+                                            </div>
+                                            
+                                            <div id="tab_il1" class="tab_content">
+                                               <h3>ILLINOIS > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_il2" class="tab_content">
+                                               <h3>ILLINOIS > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            <div id="tab_mi1" class="tab_content">
+                                               <h3>MICHIGAN > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_mi2" class="tab_content">
+                                               <h3>MICHIGAN > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            <div id="tab_mn1" class="tab_content">
+                                               <h3>MINNESOTA > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_mn2" class="tab_content">
+                                               <h3>MINNESOTA > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            <div id="tab_nc1" class="tab_content">
+                                               <h3>NORTH CAROLINA > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_nc2" class="tab_content">
+                                               <h3>NORTH CAROLINA > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            <div id="tab_oh1" class="tab_content">
+                                               <h3>OHIO > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_oh2" class="tab_content">
+                                               <h3>OHIO > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            <div id="tab_sc1" class="tab_content">
+                                               <h3>SOUTH CAROLINA > Retail Sales Representative</h3>
+                                            </div>
+                                            
+                                            <div id="tab_sc2" class="tab_content">
+                                               <h3>SOUTH CAROLINA > Territory Sales Manager</h3>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    
+                                    
+                                    
+                                    
+                                        <section class="right-col-careers-upload-box left-center">
+                                        <h4>TO APPLY UPLOAD RESUME<br />
+                                        <span style="font-size:11px;">PDF, DOC, DOCX, TXT</span></h4>
+                                        <img src="images/upload-btn.jpg" style="alignment-adjust:central"/>
+                                        </section>
+                                    
                                     </section>
                                       
                                 </section>

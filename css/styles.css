@@ -735,7 +735,6 @@ ul#thumblist li a.zoomThumbActive{
 	font-weight: bold;
 	margin: 0 0 5px 0;
 	padding: 10px 5px 10px 25px;
-	
 }
 
 .careersmenu a.expanded {
@@ -767,11 +766,10 @@ ul#thumblist li a.zoomThumbActive{
 	background : #ff0000;
 	text-decoration: none;
 }
-.careersmenu li.active a {
-	background: #fff;
-}
-.careersmenu li.active li a {
-	background: #e8e8e8;
+
+.subcareersmenu ul li.active {
+	background : #000000;
+	text-decoration: none;
 }
 
 /***********************************/
