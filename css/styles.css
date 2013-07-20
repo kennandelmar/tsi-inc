@@ -396,8 +396,10 @@ h6{
 #main-section .content{
 	margin:10px 0 0 0;
 	padding:0;
-	background:#c60b0b;
-	opacity:0.9;
+	background: rgba(198,11,11,0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c60b0b, endColorstr=#c60b0b);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#c60b0b, endColorstr=#c60b0b)";
 	overflow:hidden;
 	position:relative;
 	webkit-box-shadow: 0px 0px 40px rgba(0,0,0,0.6);
@@ -419,10 +421,10 @@ h6{
 .left-col{
 	width:358px;
 	max-height:3000px;
-	min-height:2350px;
+	min-height:820px;
 	margin:0;
 	padding:0;
-	background: rgba(154,18,18,0.8);
+	background: rgba(154,18,18,0.2);
 	webkit-box-shadow: 0px 0px 40px rgba(0,0,0,0.6) inset;
 	   moz-box-shadow: 0px 0px 40px rgba(0,0,0,0.6) inset;
 	       box-shadow: -10px 0px 40px rgba(0,0,0,0.4) inset;
@@ -430,7 +432,7 @@ h6{
 .divider-col{
 	width:4px;
 	max-height:3000px;
-	min-height:2350px;
+	min-height:820px;
 	background:url(../images/content-divider.jpg) center top no-repeat;
 }
 .right-col{
@@ -438,7 +440,8 @@ h6{
 	margin:0;
 	padding:0 0 20px 0;
 	background:url(../images/content-bg.jpg) left top repeat;
-	height:100%;
+	min-height:800px;
+	max-height:3000px;
 }
 
 .left-col-lable-box{
@@ -449,6 +452,93 @@ h6{
 	background:#820808;
 	color:#FFF;
 }
+.left-col-prod-det{
+	width:100%;
+	margin:0;
+	padding:0;
+	color:#FFF;
+}
+.left-col-prod-det > h1{
+	width:auto;	
+	margin:20px 0;
+	padding: 10px;
+	background:#820808;
+	color:#FFF;
+	font-size:21px;
+	line-height:21px;
+	font-weight:bold;
+}
+.prod-det-price{
+	color:#fcdb00;
+	font-size:85px;
+	padding:10px;
+	text-align:center;
+	font-weight:bold;
+	line-height:85px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.prod-det-price sup{
+	font-size:35px;
+}
+.prod-form{
+	margin:10px 0 20px;
+	padding:0;
+	list-style:none;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+}
+.prod-form li input{
+	width:50px;
+	padding:7px;
+	background:#7f0303;
+	border:transparent;
+	-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.3) inset, 0 0px 1px rgba(255,255,255,0.3);
+	   -moz-box-shadow:0 1px 5px rgba(0,0,0,0.3) inset, 0 0px 1px rgba(255,255,255,0.3);
+	        box-shadow:0 1px 5px rgba(0,0,0,0.3) inset, 0 0px 1px rgba(255,255,255,0.3);
+	border-radius:3px;
+}
+.prod-form li{
+	margin:0;
+	padding:0 5px 0 0;
+	list-style:none;
+	display:inline-block;
+}
+.prod-form li button{
+	border:3px;
+	background:url(../images/addtocart.png) center center no-repeat;
+	padding:19px 76px;
+	overflow:hidden;
+	text-indent:-9999px;
+}
+.left-col-prod-det > article{
+	margin:10px 20px;
+	padding:10px;
+	width:auto;
+	background:#d00707;
+	line-height:18px;
+}
+.prod-det-thumb img{
+	width:90px;
+	height:90px;
+}
+.clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden;}
+.clearfix{display:block;zoom:1}
+
+
+ul#thumblist{display:block;}
+ul#thumblist li{float:left;margin-right:2px;list-style:none;}
+ul#thumblist li a{display:block;border:1px solid #CCC;}
+ul#thumblist li a.zoomThumbActive{
+    border:1px solid red;
+}
+
+.jqzoom{
+
+	text-decoration:none;
+	float:left;
+}
+
 
 .left-col-shop{
 	width:100%;
@@ -569,6 +659,19 @@ h6{
 
 .prod-thumbs article{
 	padding:6px 3px 3px 3px;
+}
+
+/*===== Product Destails =====*/
+.large-prod-img{
+	width:582px;
+	height:712px;
+	background:#fff;
+	opacity:1 !important;
+	margin:30px auto;
+	border:4px solid #fff;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	       -border-radius:3px;
 }
 
 .clear{
