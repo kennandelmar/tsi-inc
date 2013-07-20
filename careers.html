@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<title>TRENDSETTAH INC</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		setTimeout(function() {
+			// Slide
+			/*$('#menu1 > li > a.expanded + ul').slideToggle('medium');
+			$('#menu1 > li > a').click(function() {
+				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
+			});
+			$('#example1 .expand_all').click(function() {
+				$('#menu1 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').slideDown('medium');
+			});
+			$('#example1 .collapse_all').click(function() {
+				$('#menu1 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').slideUp('medium');
+			});
+			*/
+			// Fade
+			/*$('#menu2 > li > a.expanded + ul').fadeIn();
+			$('#menu2 > li > a').click(function() {
+				var el = $(this).parent().find('> ul');
+				if($(this).hasClass('collapsed'))
+					$(el).fadeIn();
+				else
+					$(el).fadeOut();
+				$(this).toggleClass('expanded').toggleClass('collapsed');
+			});
+			$('#example2 .expand_all').click(function() {
+				$('#menu2 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').fadeIn();
+			});
+			$('#example2 .collapse_all').click(function() {
+				$('#menu2 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').fadeOut();
+			});
+			*/
+			// Grow/Shrink
+			/*$('#menu3 > li > a.expanded + ul').show('normal');
+			$('#menu3 > li > a').click(function() {
+				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').toggle('normal');
+			});
+			$('#example3 .expand_all').click(function() {
+				$('#menu3 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').show('normal');
+			});
+			$('#example3 .collapse_all').click(function() {
+				$('#menu3 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').hide('normal');
+			});
+			*/
+			// Appear/Disappear
+			/*$('#menu4 > li > a.expanded + ul').show();
+			$('#menu4 > li > a').click(function() {
+				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').toggle();
+			});
+			$('#example4 .expand_all').click(function() {
+				$('#menu4 > li > a.collapsed').addClass('expanded').removeClass('collapsed').parent().find('> ul').show();
+			});
+			$('#example4 .collapse_all').click(function() {
+				$('#menu4 > li > a.expanded').addClass('collapsed').removeClass('expanded').parent().find('> ul').hide();
+			});
+			*/
+			// Accordion
+			$('#careersmenuID > li > a.expanded + ul').slideToggle('medium');
+			$('#careersmenuID > li > a').click(function() {
+				$('#careersmenuID > li > a.expanded').not(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
+				$(this).toggleClass('expanded').toggleClass('collapsed').parent().find('> ul').slideToggle('medium');
+			});
+		}, 250);
+	});
+</script>
+
+</head>
+<body>
+    <div id="wrapper">
+    	<div class="w1">
+			<div class="w2">
+            	<!-- HEADER -->
+                <header id="header">
+                	<section class="header">
+                        <section class="logo"><a href="index.html"><img src="images/blank.gif" /></a></section>
+                        <section class="main-nav-box">
+                            <nav id="main-nav">
+                                <ul>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="active"><a href="careers.html">Careers</a></li>
+                                    <li><a href="products.html">Products</a></li>
+                                    <li><a href="contactus.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </section>
+                </header><!-- / HEADER -->
+                
+                <!-- / MAIN --><div id="main">
+                	<div class="eagle-bg">
+                		<section id="main-section">
+                            <section class="slider">
+                            	<img src="images/slider-temp.jpg" />
+                            </section>
+                            
+                            <section class="content">
+                                <section class="left-col left-float">
+                                	<section class="left-col-lable-box">
+                                        <h2>JOB</h2>
+                                        <h1>OPPORTUNITIES</h1>                                        
+                                    </section>
+                                    
+                                    <section class="careers-menu-box">
+  
+                                        <ul id="careersmenuID" class="careersmenu">
+                                            <li><a class="collapsed">CALIFORNIA</a>
+                                                <ul>
+                                                    <li><a href="#">Account Payables/Receivable Specialist</a></li>
+                                                    <li><a href="#">Inside Sales/Customer Service Representive</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">ILLINOIS</a>
+                                                <ul>
+                                                    <li><a href="#">Retail Sales Representative</a></li>
+                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">MICHIGAN</a>
+                                                <ul>
+                                                    <li><a href="#">Retail Sales Representative</a></li>
+                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">MINNESOTA</a>
+                                                <ul>
+                                                    <li><a href="#">Retail Sales Representative</a></li>
+                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">NORTH CAROLINA</a>
+                                                <ul>
+                                                    <li><a href="#">Retail Sales Representative</a></li>
+                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">OHIO</a>
+                                                <ul>
+                                                    <li><a href="#">Account Payables/Receivable Specialist</a></li>
+                                                    <li><a href="#">Inside Sales/Customer Service Representive</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a class="collapsed">SOUTH CAROLINA</a>
+                                                <ul>
+                                                    <li><a href="#">Retail Sales Representative</a></li>
+                                                    <li><a href="#">Territory Sales Manager</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>                                   
+									</section>
+                                    
+                                    <section class="clear"></BR></BR></BR></section>
+                                    <section class="left-col-shop">
+                                        <section class="left-col-lable-box2">
+                                        	<i></i>
+                                            <h1>TRENDSETTAH LIMITED EDITION</h1>
+                                            <h2>STARS AND STRIPES BACKPACK</h2>
+                                        </section>
+                                        <section class="left-col-shop-image left-center">
+                                        	<img src="images/backpack_shop.jpg" />
+                                        </section> 
+                                        <section class="left-col-shop-link left-center">
+                                        	<a href="shop.html">CLICK TO SHOP</a>
+                                        </section> 
+                                    </section>
+                                </section>
+                                
+                                <section class="divider-col left-float"></section>
+                                                                
+                                <section class="right-col left-float">
+                                	<section class="right-col-careers-box">
+                                       <h3>Below Are A List Of Job Opportunities<br />
+                                       TRENDSETTAH INC Are Currently Hiring For</h3>
+                                       <span>Trendsettah, Inc. a booming manufacturer of tobacco products, is seeking Sales Representatives in the following States: Arizona, Colorado, Utah, Alabama, Florida, Kansas, Ohio, Pennsylvania, Michigan, Missouri, Tennessee, New Mexico, Los Angeles<br /><br />
+                                       We are looking for a highly motivated self – starter to market our products to retailers and wholesalers.  If you are a hard – working and dependable Individual and have the desire to grow within the Trendsettah, Inc. family, please keep reading!</span>
+                                       
+                                       <h3>What you’ll do:</h3>
+                                       <span>Develop positive working relationships with store owners and store managers by serving as their tobacco products expert.<br /><br />
+                                       Manage Trendsettah, Inc.’s promotional programs; secure and maintain point-of-purchase displays that alert customers to brand availability.<br /><br />
+                                       Perform store audits of tobacco purchases, review data and ensure the financial resources are being monitored within company guidelines Trendsettah, Inc. will provide company paid training, a company vehicle, and a company computer and cell phone along with a competitive annualized salary.</span>
+                                       
+                                       <h3>To be considered:</h3>                                       
+                                       <span>Candidate must have a BS/BA degree; or in lieu of a degree, High School diploma with 3 years of work experience.  You must be 21 years of age or older.<br /><br />
+                                       Possess a valid driver’s license issued from the state in which employed.<br /><br />
+                                       Have good oral communication and effective interpersonal skills including persuasion are essential.<br /><br />
+                                       The ability to plan, organize, and prioritize multiple tasks independently.<br /><br />
+Must be able to perform light lifting/physical activities such as bending and squatting.</span>
+                                       
+                                       <h3>Call Center Representative I (Includes Selling)</h3>
+                                       
+                                       <h3>Reports to Director of Operations</h3>
+                                       <span>Makes and receives phone call with the intent of promoting or selling company products or services.  May provide basic level of customer support but refers more complex problems to other staff members.  Requires an in depth knowledge of products and services offered.  May require a bachelor’s degree in area of specialty and/or 0-2 years of experience in the filed or in a related area.  Has knowledge of commonly used concepts, practices and procedures within particular field.  Relies on instruction and pre-established guidelines to perform functions of the job.  Works under immediate supervision.  Reports to a supervisor or Manager.</span> 
+                                                                              
+                                       <h3>General Duties:</h3>
+                                       
+                                       <h3>Inbound Call Center Duties:</h3>
+                                       
+                                       <span>answer calls professionally<br />
+                                       partnership with outside sales team for the following:<br />
+                                       respond to customer inquiries<br />
+                                       research required information using available resources<br />
+                                       handle and resolve complaints<br />
+                                       provide product and service information<br />
+                                       follow up customer calls where necessary<br />
+                                       enter customer information<br />
+                                       process orders, forms and applications<br />
+                                       identify and escalate priority issues<br />
+                                       route calls to appropriate resource<br />
+                                       complete call logs<br />
+                                       produce call reports<br />
+                                       Outbound Call Center Duties<br /><br />
+                                       
+                                       contact businesses or private individuals by phone<br />
+                                       deliver prepared sales scripts to persuade potential customers to purchase a product or describe products and services<br />
+                                       respond to questions<br />
+                                       obtain customer information<br />
+                                       obtain possible customer leads<br />
+                                       data entry and maintenance of customer/potential customer data bases<br />
+                                       follow up on initial contacts<br />
+                                       maintain records of telephonic interactions, orders and accounts</span>
+                                       
+                                       <section class="right-col-careers-upload-box left-center">
+                                       <h4>TO APPLY UPLOAD RESUME<br />
+                                       <span style="font-size:11px;">PDF, DOC, DOCX, TXT</span></h4>
+                                       <img src="images/upload-btn.jpg" style="alignment-adjust:central"/>
+                                       </section>
+                                       
+                                    </section>
+                                      
+                                </section>
+                                
+                                <div class="clear"></div>
+                                
+                            </section>
+                            <section class="footer-divider"></section>
+                		</section>
+                        
+                    </div>
+                </div><!-- / MAIN -->
+				
+                <!-- FOOTER --><footer id="footer">
+                    <footer class="footer-divider"></footer>
+                    <footer class="footer-copyright">©TRENDSETTAH INC. 2012</footer>
+                </footer><!-- / FOOTER -->
+            </div>
+    	</div>            
+    </div>
+</body>
+</html>
