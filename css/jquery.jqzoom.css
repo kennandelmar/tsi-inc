@@ -1,0 +1,220 @@
+.zoomPad{
+	position:relative;
+	float:left;
+	z-index:99;
+	cursor: -webkit-zoom-in;
+	cursor: -moz-zoom-in;
+	cursor: zoom-in;
+}
+/*.icon-zoom{
+	background:url("../images/sprites.png") no-repeat scroll -797px -6px transparent;
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:10000;
+	display:block;
+	width:55px;
+	height:70px;
+	margin:-35px 0 0 -22.5px;
+	opacity:0;
+	-webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}*/
+.expand-zoom{
+	background:url("../images/sprites.png") no-repeat scroll -762px -253px transparent;
+	position:absolute;
+	top:0;
+	right:0;
+	width:57px;
+	height:57px;
+	z-index:1000;
+	display:block;
+	cursor:pointer;
+	opacity:0.8;
+}
+.gallery-wrap:hover .expand-zoom{
+	opacity:0;
+	-webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+}
+.zoomPreload{
+   -moz-opacity:0.8;
+   opacity: 0.8;
+   filter: alpha(opacity = 80);
+   color: #333;
+   font-size: 12px;
+   font-family: Tahoma;
+   text-decoration: none;
+   padding: 8px;
+   text-align:center;
+   background-image: url(../images/zoomloader2.gif);
+   background-repeat: no-repeat;
+   background-position: 38px 25px;
+   z-index:110;
+   width:90px;
+   height:43px;
+   position:absolute;
+   top:0px;
+   left:0px;
+    * width:100px;
+    * height:49px;
+}
+.zoomPup{
+	overflow:hidden;
+	background-color: #fff;
+	-moz-opacity:0.6;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	z-index:120;
+	position:absolute;
+	border:1px solid #eee;
+  	z-index:101;
+  	cursor:crosshair;
+}
+.zoomPup img{
+	width:400px;
+	height:400px;
+}
+.zoomOverlay{
+	position:absolute;
+	left:0px;
+	top:0px;
+	background:#FFF;
+	/*opacity:0.5;*/
+	z-index:5000;
+	width:100%;
+	height:100%;
+	display:none;
+  	z-index:101;
+}
+
+.zoomWindow{
+	position:absolute;
+	left:110%;
+	left:0 !important;
+	top:40px;
+	background:#fff url(../images/zoomloader2.gif) center center no-repeat;
+	height:auto !important;
+}
+/*.zoomWindow img{
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}*/
+.zoomWrapper{
+	position:relative;
+	border:none;
+  	z-index:110;
+}
+.zoomWrapperTitle{
+	display:block;
+	background:#999;
+	color:#FFF;
+	height:18px;
+	line-height:18px;
+	width:100%;
+  overflow:hidden;
+	text-align:center;
+	font-size:10px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:120;
+  -moz-opacity:0.6;
+  opacity: 0.6;
+  filter: alpha(opacity = 60);
+}
+.zoomWrapperImage{
+	display:block;
+  position:relative;
+  overflow:hidden;
+  z-index:110;
+
+}
+.zoomWrapperImage img{
+  border:0px;
+  display:block;
+  position:absolute;
+  z-index:101;
+}
+
+.zoomIframe{
+  z-index: -1;
+  filter:alpha(opacity=0);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  position:absolute;
+  display:block;
+}
+
+/*********************************************************
+/ When clicking on thumbs jqzoom will add the class
+/ "zoomThumbActive" on the anchor selected
+/*********************************************************/
+
+.fullWindow{
+	position:fixed;
+	left:110%;
+	left:0 !important;
+	top:40px;
+	background: url(../images/zoomloader2.gif) center center no-repeat rgba(0,0,0,0.8);
+	height:100%;
+	width:100%;
+	/*display:block !important;*/
+}
+/*.zoomWindow img{
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}*/
+.fullWrapper{
+	position:relative;
+	border:none;
+  	z-index:110;
+}
+.fullWrapperTitle{
+	display:block;
+	background:#999;
+	color:#FFF;
+	height:18px;
+	line-height:18px;
+	width:100%;
+  overflow:hidden;
+	text-align:center;
+	font-size:10px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  z-index:120;
+  -moz-opacity:0.6;
+  opacity: 0.6;
+  filter: alpha(opacity = 60);
+}
+.fullWrapperImage{
+	display:block;
+  position:relative;
+  overflow:hidden;
+  z-index:110;
+
+}
+.fullWrapperImage img{
+  border:0px;
+  display:block;
+  position:absolute;
+  z-index:101;
+}
+
+.fullIframe{
+  z-index: -1;
+  filter:alpha(opacity=0);
+  -moz-opacity: 0.80;
+  opacity: 0.80;
+  position:absolute;
+  display:block;
+}
