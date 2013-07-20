@@ -1,0 +1,26 @@
+/******CONTACTUS (starts here)*********/
+.contactusForm {
+	margin: 0;
+	padding: 0;
+	position:relative;
+}
+
+.contactusForm label {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:14px;
+	padding: 0;
+	float:left;
+	width:100%;
+}
+
+.contactusForm input, textarea {
+	margin: 0 0 10px 0;
+	padding: 0;
+	float:left;
+	width:100%;
+}
+
+
+
+/******CONTACTUS (ends here)*********/
