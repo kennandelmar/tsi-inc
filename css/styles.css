@@ -121,6 +121,34 @@ h6{
 	overflow:hidden;
 	position:relative;
 }
+#splash-wrapper{
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#splash-wrapper img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+.splash-logo{
+	background: url('../images/splash-logo.png') no-repeat 0 0;
+	width:768px;
+	height:628px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-384px;
+	margin-top:-314px;
+	z-index:998;
+}
 .w1{
 	position:relative;
 	float:left;
