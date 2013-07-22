@@ -39,7 +39,7 @@ body{
 	min-width:980px;
 }
 img{
-	border-style:none;
+	border:none;
 }
 a{
 	text-decoration:none;
@@ -496,8 +496,8 @@ h6{
 	padding: 10px;
 	background:#820808;
 	color:#FFF;
-	font-size:21px;
-	line-height:21px;
+	font-size:18px;
+	line-height:18px;
 	font-weight:bold;
 }
 .prod-det-price{
@@ -606,7 +606,7 @@ ul#thumblist li a.zoomThumbActive{
 
 .left-col-lable-box h1{
 	font-weight:bold;
-	font-size:40px;
+	font-size:36px;
 	line-height:18px;
 	margin:0;
 	padding:5px 0 0 0;
@@ -689,6 +689,11 @@ ul#thumblist li a.zoomThumbActive{
 	margin-right:10px;
 }
 
+.prod-thumbs.first {
+	clear: left;
+	margin-left: 0;
+}
+
 .prod-thumbs img{
 	opacity:0;
 }
@@ -722,7 +727,6 @@ ul#thumblist li a.zoomThumbActive{
 	margin:0;
 	padding:5px 0 0 0;
 }
-
 
 /***********/
 #main .visual{
