@@ -53,11 +53,20 @@ $(document).ready(function() {
                                 <section class="left-col left-float">
                                 	<section class="left-col-prod-det">
                                         <h1>TRENDSTTAH LIMITED EDITION<br />STARS AND STRIPES BACKPACK</h1>                                    	<section class="prod-det-price">$29<sup>.99</sup></section>
-                                        <ul class="prod-form">
+                                        <!--ul class="prod-form">
                                         	<li><label>qty</label></li>
                                             <li><input name="" type="text" /></li>
                                             <li><button>add to cart</button></li>
-                                        </ul>
+                                        </ul-->
+                                        <span style="text-align:right">
+                                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                            <input type="hidden" name="cmd" value="_s-xclick">
+                                            <input type="hidden" name="hosted_button_id" value="5W5UCNS95CV74">
+                                            <input type="image" src="http://www.trendsettahinc.com/version2.0/images/addtocart.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                            </form>
+                                        </span>
+
                                         <article>
                                         	Size: One size(medium bag)<br />Dimensions: 12"x14"x3"
                                         </article>
