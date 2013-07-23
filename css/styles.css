@@ -416,9 +416,10 @@ h6{
 }
 
 #main-section .slider{
-	height:338px;
+	height:460px;
 	margin:10px 0;
 	padding:0;
+	background:rgba(255,255,255,1);
 }
 
 #main-section .content{
