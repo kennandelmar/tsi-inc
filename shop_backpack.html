@@ -5,34 +5,30 @@
 <title>TRENDSETTAH INC</title>
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 <link rel="stylesheet" href="css/jquery.jqzoom.css" type="text/css">
-<script src="js/jquery-1.6.js" type="text/javascript"></script>
-<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
  	<link rel="stylesheet" href="css/themes/light/light.css" type="text/css" media="screen" />
     <!--link rel="stylesheet" href="css/themes/dark/dark.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" /-->
     <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-<script type="text/javascript">
-$(window).load(function() {
-	$('#slider').nivoSlider();
-});
-</script>
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-	$('.jqzoom').jqzoom({
-            zoomType: 'standard',
-            lens:true,
-            preloadImages: false,
-            alwaysOn:false
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+		<script type="text/javascript">
+        jQuery(window).load(function() {
+            jQuery('#slider').nivoSlider();
         });
-	
-});
-
-
+        </script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('.jqzoom').jqzoom({
+				zoomType: 'standard',
+				lens:true,
+				preloadImages: false,
+				alwaysOn:false
+			});
+		
+		});
 </script>
 </head>
 <body>
