@@ -60,8 +60,36 @@
     }
 	    
 </script> 
+<script type="text/javascript"> 
+function validateForm(){
+	if (document.forms["contactform"]["from"].value==null || document.forms["contactform"]["from"].value==""){
+		alert("You have not entered an email address, please try again");
+		document.forms["contactform"]["from"].focus();
+		return false;
+	}
+	
+	var email = document.forms["contactform"]["from"].value;
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (!filter.test(email.value)) {
+		alert("You have not entered a valid email address, please try again");
+		return false;
+	}
+	
+	if (document.forms["contactform"]["subject"].value==null || document.forms["contactform"]["subject"].value==""){
+		alert("You have not entered a subject, please try again");
+		document.forms["contactform"]["subject"].focus();
+		return false;
+	}
+	
+	if (document.forms["contactform"]["message"].value==null || document.forms["contactform"]["message"].value==""){
+		alert("You have not entered your message, please try again");
+		document.forms["contactform"]["message"].focus();
+		return false;
+	}
+}
+</script> 
 </head>
-<body>
+<body OnLoad="document.contactform.from.focus();">
     <div id="wrapper">
     	<div class="w1">
 			<div class="w2">
@@ -96,16 +124,16 @@
                                         <h1>THE MOVEMENT</h1>                                        
                                     </section>
                                     <section class="left-col-content-text">
-                                    <form name="contactform" method="post" action="send_form_email.php" class="contactusForm">
+                                    <form name="contactform" method="post" action="send_form_email.php" class="contactusForm" onsubmit="return validateForm()">
                                     
-                                        <label for="email">Email Address*</label>
-                                        <input  type="text" name="email" maxlength="40">
+                                        <label for="from">Email Address*</label>
+                                        <input  type="text" name="from" maxlength="40">
                                         
                                         <label for="subject">Subject*</label>
-                                        <input  type="text" name="telephone" maxlength="40">
+                                        <input  type="text" name="subject" maxlength="40">
                                         
-                                        <label for="comments">Comments*</label>
-                                        <textarea  name="comments" maxlength="1000" rows="6"></textarea>
+                                        <label for="message">Message*</label>
+                                        <textarea  name="message" maxlength="1000" rows="6"></textarea>
                                         
                                         <input type="image" src="images/send-btn.png" alt="Submit" style="width:auto">
                                        

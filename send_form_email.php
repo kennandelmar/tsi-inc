@@ -1,66 +1,37 @@
-<?php
-if(isset($_POST['email'])) {
-     
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "allan.mercader@gmail.com";
-        
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
-     
-    // validation expected data exists
-    if(!isset($_POST['email']) ||
-		!isset($_POST['subject']) ||
-        !isset($_POST['comments'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
-    }
-     
-    $email_from = $_POST['email']; // required
-    $email_subject = $_POST['subject']; // required
-    $comments = $_POST['comments']; // required
-     
-    $error_message = "";
-    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-  if(!preg_match($email_exp,$email_from)) {
-    $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
-  }
-  if(strlen($email_subject) < 1) {
-    $error_message .= 'The Subject you entered do not appear to be valid.<br />';
-  }
-  if(strlen($comments) < 2) {
-    $error_message .= 'The Comments you entered do not appear to be valid.<br />';
-  }
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
-    $email_message = "Form details below.\n\n";
-     
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
-     
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Subject: ".clean_string($email_subject)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
-     
-     
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-?>
+<?php 
+ $to = "allan.mercader@gmail.com"; ; 
+ $from = $_REQUEST['from'] ; 
+ $subject = $_REQUEST['subject'] ; 
+ $headers = "From: $from"; 
+ //$subject = "Web Contact Data"; 
  
-<!-- include your own success html here -->
+ $fields = array(); 
+ $fields{"from"} = "from"; 
+ $fields{"subject"} = "subject"; 
+ $fields{"message"} = "message"; 
  
-Thank you for contacting us. We will be in touch with you very soon.
+ $body = "We have received the following information:\n\n"; foreach($fields as $a => $b){ 	$body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); } 
  
-<?php
-}
-?>
+ $headers2 = "From: noreply@trendsettahinc.com"; 
+ $subject2 = "Thank you for contacting us"; 
+ $autoreply = "Thank you for contacting us. Somebody will get back to you as soon as possible, usualy within 48 hours. If you have any more questions, please consult our website at www.oursite.com";
+ 
+$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+
+if(!preg_match($email_exp,$from)) {print "You have not entered a valid email address, please go back and try again";} 
+else { 
+	if($from == '') {print "You have not entered an email address, please go back and try again";} 
+	else { 
+		if($subject == '') {print "You have not entered a subject, please go back and try again";} 
+		else { 
+			if($message == '') {print "You have not entered your message, please go back and try again";} 
+			else { 
+				$send = mail($to, $subject, $body, $headers); 
+				$send2 = mail($from, $subject2, $autoreply, $headers2); 
+				if($send) {header( "Location: http://www.trendsettahinc.com/version2.0/thankyou.html" );} 
+				else {print "We encountered an error sending your mail, please notify webmaster@trendsettahinc.com"; }
+				}
+			}
+		}
+	}
+?> 
