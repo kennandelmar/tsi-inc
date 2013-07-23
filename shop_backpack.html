@@ -3,23 +3,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>TRENDSETTAH INC</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-    <script src="js/jquery-1.6.js" type="text/javascript"></script>
-	<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/jquery.jqzoom.css" type="text/css">
-    <script type="text/javascript">
-
-$(document).ready(function() {
-	$('.jqzoom').jqzoom({
-            zoomType: 'standard',
-            lens:true,
-            preloadImages: false,
-            alwaysOn:false
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<link rel="stylesheet" href="css/jquery.jqzoom.css" type="text/css">
+ 	<link rel="stylesheet" href="css/themes/light/light.css" type="text/css" media="screen" />
+    <!--link rel="stylesheet" href="css/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" /-->
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+		<script type="text/javascript">
+        jQuery(window).load(function() {
+            jQuery('#slider').nivoSlider();
         });
-	
-});
-
-
+        </script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('.jqzoom').jqzoom({
+				zoomType: 'standard',
+				lens:true,
+				preloadImages: false,
+				alwaysOn:false
+			});
+		
+		});
 </script>
 </head>
 <body>
@@ -29,7 +38,7 @@ $(document).ready(function() {
             	<!-- HEADER -->
                 <header id="header">
                 	<section class="header">
-                        <section class="logo"><a href="index.html"><img src="images/blank.gif" /></a></section>
+                        <section class="logo"><a href="home.html"><img src="images/blank.gif" /></a></section>
                         <section class="main-nav-box">
                             <nav id="main-nav">
                                 <ul>
@@ -47,8 +56,17 @@ $(document).ready(function() {
                 	<div class="eagle-bg">
                 		<section id="main-section">
                             <section class="slider">
-                            	<img src="images/slider-temp.jpg" />
+                            	<div class="slider-wrapper theme-light">
+                                    <div id="slider" class="nivoSlider">
+                                        <img src="images/timthumb1.png" data-thumb="images/timthumb1.png" alt="" title="This is an example of a caption"/>
+                                        <img src="images/timthumb2.jpg" data-thumb="images/timthumb2.jpg" alt="" data-transition="slideInLeft" />
+                                        <img src="images/timthumb3.jpg" data-thumb="images/timthumb3.jpg" alt="" title="#htmlcaption" />
+                                        <img src="images/timthumb4.jpg" data-thumb="images/timthumb4.jpg" alt="" title="#htmlcaption" />
+                                        <img src="images/timthumb5.jpg" data-thumb="images/timthumb5.jpg" alt="" title="#htmlcaption" />
+                                    </div>
+                                </div>
                             </section>
+                            
                             <section class="content">
                                 <section class="left-col left-float">
                                 	<section class="left-col-prod-det">
