@@ -4,7 +4,18 @@
 <title>TRENDSETTAH INC</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-<script src="js/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+ 	<link rel="stylesheet" href="css/themes/light/light.css" type="text/css" media="screen" />
+    <!--link rel="stylesheet" href="css/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" /-->
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript">
+$(window).load(function() {
+	$('#slider').nivoSlider();
+});
+</script> 
 <script type="text/javascript"> 
 	// jQuery(".prod-thumbs img").css({"display":"none");
 	
@@ -84,7 +95,15 @@
                 	<div class="eagle-bg">
                 		<section id="main-section">
                             <section class="slider">
-                            	<img src="images/slider-temp.jpg" />
+                            	<div class="slider-wrapper theme-light">
+                                    <div id="slider" class="nivoSlider">
+                                        <img src="images/timthumb1.png" data-thumb="images/timthumb1.png" alt="" title="This is an example of a caption"/>
+                                        <img src="images/timthumb2.jpg" data-thumb="images/timthumb2.jpg" alt="" data-transition="slideInLeft" />
+                                        <img src="images/timthumb3.jpg" data-thumb="images/timthumb3.jpg" alt="" title="#htmlcaption" />
+                                        <img src="images/timthumb4.jpg" data-thumb="images/timthumb4.jpg" alt="" title="#htmlcaption" />
+                                        <img src="images/timthumb5.jpg" data-thumb="images/timthumb5.jpg" alt="" title="#htmlcaption" />
+                                    </div>
+                                </div>
                             </section>
                             
                             <section class="content">
