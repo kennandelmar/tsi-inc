@@ -14,7 +14,7 @@
  
  $headers2 = "From: noreply@trendsettahinc.com"; 
  $subject2 = "Thank you for contacting us"; 
- $autoreply = "Thank you for contacting us. Somebody will get back to you as soon as possible, usualy within 48 hours. If you have any more questions, please consult our website at www.oursite.com";
+ $autoreply = "Thank you for contacting us. Somebody will get back to you as soon as possible, usualy within 48 hours. If you have any more questions, please consult our website at www.trendsettahinc.com";
  
 $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
@@ -28,7 +28,7 @@ else {
 			else { 
 				$send = mail($to, $subject, $body, $headers); 
 				$send2 = mail($from, $subject2, $autoreply, $headers2); 
-				if($send) {header( "Location: http://www.trendsettahinc.com/version2.0/thankyou.html" );} 
+				if($send) {header( "Location: http://www.trendsettahinc.com/version2.0/thankyou.html#thankyou" );} 
 				else {print "We encountered an error sending your mail, please notify webmaster@trendsettahinc.com"; }
 				}
 			}
